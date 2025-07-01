@@ -10,6 +10,16 @@ const nextConfig = {
   // Use this to set Nx-specific options
   // See: https://nx.dev/recipes/next/next-config-setup
   nx: {},
+  
+  // Add rewrites to proxy API requests to the NestJS backend
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'http://localhost:3000/api/:path*',
+      },
+    ];
+  },
 };
 
 const plugins = [
