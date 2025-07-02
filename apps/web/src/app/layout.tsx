@@ -1,5 +1,7 @@
 import './global.css';
 import { Providers } from './providers';
+import { TitleBar } from '../components/TitleBar';
+import { Footer } from '../components/Footer';
 
 export const metadata = {
   title: 'Guild Manager',
@@ -15,7 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Providers>
-          {children}
+          <TitleBar />
+          <main style={{ minHeight: '80vh' }}>{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>
