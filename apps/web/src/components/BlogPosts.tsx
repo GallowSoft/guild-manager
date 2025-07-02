@@ -8,12 +8,12 @@ const blogPosts = [
 export function BlogPosts() {
   return (
     <Stack gap="md" my="md">
-      <Title order={2} size="h2">Blog Posts</Title>
+      <Title order={2} size="h2" c="#fff">Blog Posts</Title>
       {blogPosts.map((post, idx) => (
-        <Card key={idx} shadow="sm" padding="md" radius="md" withBorder>
-          <Title order={4}>{post.title}</Title>
-          <Text size="xs" c="dimmed" mb="xs">By {post.author} • {post.date}</Text>
-          <Text>{post.excerpt}</Text>
+        <Card key={idx} shadow="md" padding="md" radius="md" withBorder style={{ background: '#232326', color: '#fff', border: '1px solid #35353a' }}>
+          <Title order={4} c="#fff">{post.title}</Title>
+          <Text size="xs" c="#bbb" mb="xs">By {post.author} • {post.date}</Text>
+          <Text c="#fff">{post.excerpt}</Text>
         </Card>
       ))}
     </Stack>

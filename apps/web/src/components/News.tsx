@@ -8,12 +8,12 @@ const newsItems = [
 export function News() {
   return (
     <Stack gap="md" my="md">
-      <Title order={2} size="h2">News</Title>
+      <Title order={2} size="h2" c="#fff">News</Title>
       {newsItems.map((item, idx) => (
-        <Card key={idx} shadow="sm" padding="md" radius="md" withBorder>
-          <Title order={4}>{item.title}</Title>
-          <Text size="xs" c="dimmed" mb="xs">{item.date}</Text>
-          <Text>{item.content}</Text>
+        <Card key={idx} shadow="md" padding="md" radius="md" withBorder style={{ background: '#232326', color: '#fff', border: '1px solid #35353a' }}>
+          <Title order={4} c="#fff">{item.title}</Title>
+          <Text size="xs" c="#bbb" mb="xs">{item.date}</Text>
+          <Text c="#fff">{item.content}</Text>
         </Card>
       ))}
     </Stack>

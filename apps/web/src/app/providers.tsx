@@ -10,14 +10,31 @@ import '@mantine/notifications/styles.css';
 import '@mantine/spotlight/styles.css';
 
 const theme = createTheme({
-  /** Put your mantine theme override here */
-  primaryColor: 'blue',
+  primaryColor: 'red',
+  colors: {
+    dark: [
+      '#18181b', // 0 - background
+      '#232326', // 1
+      '#2c2c31', // 2
+      '#35353a', // 3
+      '#3e3e44', // 4
+      '#48484f', // 5
+      '#52525a', // 6
+      '#5c5c66', // 7
+      '#666672', // 8
+      '#70707e', // 9 - lightest
+    ],
+    red: [
+      '#ffebee', '#ffcdd2', '#ef9a9a', '#e57373', '#ef5350', '#f44336', '#e53935', '#d32f2f', '#c62828', '#b71c1c'
+    ],
+  },
   fontFamily: 'Inter, sans-serif',
+  headings: { fontFamily: 'Inter, sans-serif' },
 });
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <MantineProvider theme={theme} defaultColorScheme="light">
+    <MantineProvider theme={theme} defaultColorScheme="dark">
       <ModalsProvider>
         <Notifications />
         <Spotlight
